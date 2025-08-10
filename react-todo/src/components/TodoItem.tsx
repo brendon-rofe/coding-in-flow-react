@@ -7,7 +7,10 @@ interface TodoItemProps {
 export default function TodoItem ({todo}: TodoItemProps) {
   return (
     <div>
-      <p>{todo.title}</p>
+      <label>
+        <input type="checkbox" className="scale-125" />
+        <span className={todo.completed ? "linethrough text-gray-400" : ""}>{todo.title}</span>
+      </label>
     </div>
   )
 }
